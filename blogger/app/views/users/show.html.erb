@@ -3,8 +3,16 @@
 <p><%= @user.zipcode %></p>
 <p><%= @user.country %></p>
 
+<h3>Comments (<%= @user.comments.length %>)</h3>
+
+<%= render partial: 'users/comment', collection: @user.comments %>
+
 <%= link_to "delete", user_path(@user), method: :delete, data: {confirm: "Really delete the user?"} %>
 
 <%= link_to "edit", edit_user_path(@user) %>
+
+<%= render partial: "comments/form" %>
+
+<%= link_to "<< Back to Users List", users_path %>
 
 
