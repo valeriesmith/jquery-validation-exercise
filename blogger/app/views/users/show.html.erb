@@ -1,4 +1,17 @@
 <h1><%= @user.username %></h1>
+
+<p>
+	Tags:
+	<% if @user.tags.length > 0 %>
+		<% @user.tags.each do |tag| %>
+			<%= link_to tag.name, tag_path(tag) %>
+		<% end %>
+	<% else %>
+		<p>Uncategorized</p>
+	<% end %><br>
+</p>
+
+
 <p><%= @user.email %></p>
 <p><%= @user.zipcode %></p>
 <p><%= @user.country %></p>
