@@ -3,4 +3,8 @@
 <p><%= @user.zipcode %></p>
 <p><%= @user.country %></p>
 
+<%= link_to "delete", user_path(@user), method: :delete, data: {confirm: "Really delete the user?"} %>
+
+<%= link_to "edit", edit_user_path(@user) %>
+
 
