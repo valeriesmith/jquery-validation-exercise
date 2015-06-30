@@ -11,6 +11,14 @@
 	<% end %><br>
 </p>
 
+<p>
+	<% if @user.image.exists? %>
+		<%= image_tag @user.image.url, size: "100" %>
+	<% else %>
+		<p> No image uploaded yet</p>	
+	<% end %>
+</p>
+
 
 <p><%= @user.email %></p>
 <p><%= @user.zipcode %></p>

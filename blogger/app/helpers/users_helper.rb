@@ -1,7 +1,7 @@
 module UsersHelper
 
 	def user_params
-		params.require(:user).permit(:username,:email,:zipcode,:country,:password, :tag_list)
+		params.require(:user).permit(:username,:email,:zipcode,:country,:password, :tag_list, :image)
 	end
 
 end
