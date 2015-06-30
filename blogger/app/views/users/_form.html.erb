@@ -36,8 +36,11 @@
 	</p>
 
 	<p>
-		<%= f.label :image, "Attach an Image" %><br>
-		<%= f.file_field :image %>
+		<% if @user.image.exists? %>
+			<%= image_tag @article.image.url, size: "50" %><br>
+		<% end %>
+			<%= f.label :image, "Attach an Image" %><br>
+			<%= f.file_field :image %>
 	</p>
 
 	<p>
